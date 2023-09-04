@@ -1,0 +1,9 @@
+<h1>Log in Credentials</h1>
+<br><br>
+<form #valid="ngForm" (ngSubmit)="loginUser(valid.value)" >
+  <div class="container">
+  <input type="text" #names="ngModel" name="username" placeholder="enter name" ngModel><br><br>
+  <span *ngIf="names.invalid">Enter valid username</span>
+  <input type="password"  #password="ngModel" name="password" placeholder="enter password" ngModel><br><br>
+</div>
+<button type="submit">login</button>
